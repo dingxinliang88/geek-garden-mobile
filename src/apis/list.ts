@@ -19,3 +19,38 @@ export function fetchChannels() {
     url: "/channels",
   });
 }
+
+export type ListParams = {
+  channel_id: string;
+  timestamp: string;
+};
+
+type ListItem = {
+  art_id: string;
+  title: string;
+  aut_id: string;
+  comm_count: number;
+  pubdate: string;
+  aut_name: string;
+  is_top: number;
+  cover: {
+    type: number;
+    images: string[];
+  };
+};
+
+export type ListRes = {
+  results: ListItem[];
+  pre_timestamp: string;
+};
+
+/**
+ * @param params channel_id, timestamp
+ * @returns 文章列表
+ */
+export function fetchList(params: ListParams) {
+  return http.request<ResType<ListRes>>({
+    url: "/articles",
+    params,
+  });
+}

@@ -1,0 +1,13 @@
+.tab-container {
+  position: fixed;
+  height: 50ox;
+  top: 0;
+  width: 100%;
+}
+
+.list-container {
+  position: fixed;
+  top: 50px;
+  bottom: 0px;
+  width: 100%;
+}
