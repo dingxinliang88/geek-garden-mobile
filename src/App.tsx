@@ -1,5 +1,11 @@
+import { Button } from "antd-mobile";
+
 function App() {
-  return <>this is app</>;
+  return (
+    <>
+      <Button type="submit">click me</Button>
+    </>
+  );
 }
 
 export default App;
